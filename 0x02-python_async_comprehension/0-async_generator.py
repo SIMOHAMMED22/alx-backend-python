@@ -4,9 +4,10 @@
 
 import asyncio
 import random
+from typing import Generator
 
 
-async def async_generator():
+async def async_generator() -> Generator[float, None, None]: # type: ignore
     """
     An asynchronous generator that yields random integers between
                     0 and 10 after sleeping for 1 second each time.
