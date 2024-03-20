@@ -16,8 +16,3 @@ async def async_generator() -> Generator[float, None, None]:  # type: ignore
     for _ in range(10):
         await asyncio.sleep(1)
         yield random.randint(0, 10)
-
-
-async def main():
-    async for number in async_generator():
-        print(number)
