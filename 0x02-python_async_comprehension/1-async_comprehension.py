@@ -13,5 +13,8 @@ async def async_comprehension() -> List[float]:
     Returns:
         List[float]: A list of 10 random numbers.
     """
-    numbers = [number async for number in async_generator()]
-    return numbers
+    return [i async for i in async_generator()]
+
+if __name__ == "__main__":
+    result = asyncio.run(async_comprehension())
+    print(result)
